@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0;
+    }
+
+    .title {
+      color: #0088A2;
+      font-size: 60px;
+      font-weight: 400;
+      text-align: center;
+    }
+
+    .top {
+      padding: 30px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+
+    .top h1 {
+      color: #0088A2;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 30px;
+      width: 100%;
+    }
+
+    li {
+      width: 20%;
+      height: 100%;
+      display: flex;
+      text-align: center;
+      align-items: center;
+    }
+
+    li:hover {
+      background-color: #0088A2;
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+      background-color: #808080;
+      height: 50px;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .active {
+      background-color: #0088A2;
+    }
+
+    .wrapper {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 60px 0;
+    }
+
+    .item img {
+      width: 300px;
+    }
+
+    .item {
+      position: relative;
+      z-index: 1;
+    }
+
+    .item .text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      width: 100%;
+    }
+
+    .parent {
+      position: relative;
+    }
+
+    .parent::before {
+      width: 75%;
+      background-color: #6CD29B;
+      top: 0;
+      left: 0;
+      border-radius: 10px 0 0 10px;
+    }
+
+    .parent::after,
+    .parent::before {
+      position: absolute;
+      content: '';
+      height: 100%;
+      z-index: 2;
+      opacity: .9;
+    }
+
+    .parent::after {
+      width: 25%;
+      background-color: #E05959;
+      bottom: 0;
+      right: 0;
+      border-radius: 0 10px 10px 0;
+    }
+
+    .box {
+      width: 100%;
+    }
+
+    .box2 {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      left: 50%;
+      top: 950px;
+      transform: translateX(-50%)
+    }
+    .content{
+      margin-top: 20px;
+      /* height: 500px; */
+    }
+    .index {
+     height: 500px;
+     padding-top: 50px;
+     display: flex;
+     justify-content: center;
+    }
+
+    .index img {
+      width: 150px;
+      height: 300px;
+      position: relative;
+      margin-top: 30px 
+    ;
+    }
+
+    .foto,
+    .foto1,
+    .foto2,
+    .foto3,
+    .foto4 {
+      position: absolute;
+    
+    }
+     .foto{
+      left: 0;
+     }
+    .foto1 {
+      top: 20px;
+      right: 30px;
+    }
+
+    .foto2 {
+      right: 60px;
+    }
+
+    .foto3 {
+      top: 20px;
+      right: 90px;
+    }
+
+    .foto4 {
+      right: 120px;
+    }
+
+    .text2 {
+      font-size: 30px;
+      text-align: center;
+      color: #707070;
+      margin: 30px;
+      line-height: 45px;
+      padding: 40px;
+    }
+
+    .fotob {
+      margin: 100px;
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .fotob img {
+      width: 130px;
+      height: 100px;
+    }
+
+    .text3 {
+      color: #707070;
+      font-size: 25px;
+      line-height: 35px;
+      text-align: center;
+    }
+   footer{
+    background-color: #0088A2;
+    width:1200px;
+    position: absolute;
+      left: 50%;
+      transform: translatex(-50%);
+  margin-top: 30px;
+   }
+    .car {
+      display: flex;
+      justify-content: center;
+    }
+
+    .car img {
+      width: 50px;
+      height: 50px;
+      margin: 20px 10px 30px 10px;
+    }
+    .text4{
+      color: #FDFDFD;
+      font-size: 30px;
+      display: flex;
+      justify-content: space-around;
+    }
+    .text5{
+      color: #FFFFFF;
+      font-size: 20px;
+      display: flex;
+      justify-content: space-around;
+      line-height: 30px;
+      margin: 30px 0;
+    }
+    .text6{
+      margin-right: 70px;
+    }
+    .title2{
+      font-size: 60px;
+      font-weight: 400;
+      text-align: center;
+      color: #FFFFFF;
+      margin-top: 20px;
+    }
+    @media(max-width:500px){
+      .container{
+       padding: 0px 50px;
+      }
+      .title{
+        font-size: 25px;
+      }
+      .top{
+       flex-direction: column;
+      }
+      .top img{
+        width: 100px;
+        height: 100px;
+        margin: 0 150px;
+      }
+      .top h1{
+        font-size: 20px;
+        text-align: center;
+      }
+      .bottom,.index{
+        display: none;
+      }
+      .wrapper{
+       height: 300px;
+       flex-direction: column;
+       overflow: scroll;
+      }
+      .item{
+        width: 100%;
+        height: 200px;
+        border-radius: 20px;
+        margin: 20px;
+      }
+      .item img{
+        width: 100%;
+        height: 200px;
+        border-radius: 20px;
+      }
+      .parent::before {
+        border-radius: 20px 0 0 20px;
+      }
+      .parent::after{
+        border-radius: 0 20px 20px 0;
+      }
+      .content .box{
+        border-radius: 20px;
+      }
+      .wrapper2{
+        height:150px;
+        overflow: scroll;
+      }
+       .text2{
+        font-size: 15px;
+        margin: 0;
+        line-height: 20px;
+        padding: 20px;
+      }
+      .fotob{
+        margin: 30px;
+      }
+      .text3{
+        font-size: 15px;
+        line-height: 20px;
+      }
+      .car img{
+        width:30px ;
+        height: 30px;
+      }
+     }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="top">
+        <img src="60b8ee61-142c-41fe-b23f-e55fb78ec381.png" alt="">
+        <h1>SLOGAN SLOGAN SLOGAN</h1>
+      </div>
+      <div class="bottom">
+        <ul>
+          <li class="active"><a href="">Главная</a></li>
+          <li><a href="">О приложении</a></li>
+          <li><a href="">О проекте</a></li>
+          <li><a href="">Скачать</a></li>
+          <li><a href="">Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <section>
+    <div class="container">
+      <div class="wrapper">
+        <div class="item">
+          <img src="rawpixel-196464-unsplash.png" alt="" class="none">
+          <span class="text">Часто ли Вы опаздываете на работу (учёбу)?</span>
+        </div>
+        <div class="item parent">
+          <img src="rawpixel-196464-unsplash.png" alt="">
+          <span></span>
+          <span></span>
+        </div>
+        <div class="item">
+          <img src="rawpixel-196464-unsplash.png" alt="" class="none">
+          <span class="text">Часто ли Вы опаздываете на работу (учёбу)?</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <h1 class="title">О приложении</h1>
+      <div class="content">
+        <img src="rawpixel-559744-unsplash.png" alt="" class="box">
+        <img src="play-button.png" alt="" class="box2">
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="index">
+        <img src="question.png" alt="" class="foto">
+        <img src="question.png" alt="" class="foto1">
+        <img src="question.png" alt="" class="foto2">
+        <img src="question.png" alt="" class="foto3">
+        <img src="question.png" alt="" class="foto4">
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="wrapper2">
+        <h1 class="title">О проекте</h1>
+      <div class="text2"> Курс для начинающих предпринимателей, направленный на качественный результат за 6 недель.
+        Опытные бизнесмены, инвесторы и профессионалы в
+        своем деле помогают участникам на всех этапах развития их бизнеса: от разработки идеи до ее реализации.</div>
+   </div>
+   </div>
+  </section>
+  <section>
+    <div class="container">
+      <h1 class="title">Скачать</h1>
+      <div class="fotob">
+        <img src="android.png" alt="">
+        <img src="icon.png" alt="">
+      </div>
+      <div class="text3">Курс для начинающих предпринимателей, направленный на качественный результат за 6 недель.
+        Опытные бизнесмены, инвесторы и
+        профессионалы в своем деле помогают участникам на всех этапах развития их бизнеса: от разработки идеи до ее
+        реализации.</div>
+    </div>
+  </section>
+  <footer>
+    <div class="container"></div>
+    <h3 class="title2">SOME</h3>
+    <div class="car">
+      <img src="vk.png" alt="">
+      <img src="instagram (1).png" alt="">
+      <img src="facebook.png" alt="">
+    </div>
+    <div class="text4"><span>Контакты</span> <span> Адреса</span>  Помощь</div>
+    <div class="text5 "><span>Tel.: +996 (312) 915000 + <br class="br"> Еxt. <br>
+      Fax: +996 (312) 915 028</span><span>American University of Central Asia <br>
+        7/6 Aaly Tokombaev Street <br>
+        Bishkek, Kyrgyz Republic 720060</span>
+       <span class="text6"> Помощь <br>
+        Помощь <br>
+        Помощь</span></div>
+  </footer>
+</body>
+
+</html>

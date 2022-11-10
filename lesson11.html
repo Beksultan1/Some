@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;         
+        }
+        .wrapper{
+            margin: 50px 0;
+        }
+        h3,h2{
+            margin: 0;
+        }
+        .card{  
+            width: 500px;
+            box-shadow:0 0  10px black;
+            padding: 15px;
+        }
+        .product{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 50px 0;
+        }
+       .total{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+       }
+       img{
+        height: 50px;
+        margin-left: 30px;
+       }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h3>Shopping</h3>
+        <div class="wrapper">
+        <div class="product">
+            <img src="https://png.monster/wp-content/uploads/2022/06/png.monster-413.png"alt="">
+            <div class="product-name">
+                <h2>Apple juise</h2>
+            </div>
+            <div class="btn">
+                <button>+</button>
+                <span>2</span>
+                <button>-</button>
+            </div>
+            <div class="price">
+                <span>2</span>
+                <button>remove</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="https://png.monster/wp-content/uploads/2022/06/png.monster-413.png" alt="">
+            <div class="product-name">
+                <h2>Grapes juise</h2>
+            </div>
+            <div class="btn">
+                <button>+</button>
+                <span>2</span>
+                <button>-</button>
+            </div>
+            <div class="price">
+                <span>2</span>
+                <button>remove</button>
+            </div>
+        </div>
+        </div>
+        <div class="total" >
+            <span>$5</span>
+            <button>check</button>
+        </div>
+    </div>
+</body>
+</html>
